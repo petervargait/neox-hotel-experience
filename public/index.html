@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOX Hotel Experience - Welcome</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="/images/Transparent%20Logo.png" alt="NEOX Hotel" class="logo" onerror="this.style.display='none';">
+                <div class="logo-fallback">NEOX</div>
+            </div>
+            <div class="datetime-container">
+                <div class="time" id="currentTime">00:00</div>
+                <div class="date" id="currentDate">Loading...</div>
+            </div>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Welcome Back</h1>
+                <h2 class="guest-name" id="guestName">Distinguished Guest</h2>
+                <p class="welcome-message">Your room has been prepared according to your preferences</p>
+                <div class="room-info">
+                    <span class="room-number" id="roomNumber">Suite 401</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Room Parameters Section -->
+        <section class="room-parameters">
+            <h3 class="section-title">Room Environment</h3>
+            <div class="parameters-grid">
+                <div class="parameter-card">
+                    <i class="fas fa-wind parameter-icon"></i>
+                    <div class="parameter-content">
+                        <span class="parameter-label">Air Quality</span>
+                        <span class="parameter-value" id="airQuality">Excellent</span>
+                        <div class="parameter-indicator excellent"></div>
+                    </div>
+                </div>
+                <div class="parameter-card">
+                    <i class="fas fa-thermometer-half parameter-icon"></i>
+                    <div class="parameter-content">
+                        <span class="parameter-label">Temperature</span>
+                        <span class="parameter-value" id="temperature">22°C</span>
+                        <div class="parameter-indicator optimal"></div>
+                    </div>
+                </div>
+                <div class="parameter-card">
+                    <i class="fas fa-tint parameter-icon"></i>
+                    <div class="parameter-content">
+                        <span class="parameter-label">Humidity</span>
+                        <span class="parameter-value" id="humidity">45%</span>
+                        <div class="parameter-indicator optimal"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guest Preferences Section -->
+        <section class="preferences-section">
+            <h3 class="section-title">Your Preferences</h3>
+            <div class="preferences-grid">
+                <div class="preference-card">
+                    <i class="fas fa-bed preference-icon"></i>
+                    <div class="preference-content">
+                        <span class="preference-label">Pillow</span>
+                        <span class="preference-value" id="pillowType">Soft</span>
+                    </div>
+                </div>
+                <div class="preference-card">
+                    <i class="fas fa-couch preference-icon"></i>
+                    <div class="preference-content">
+                        <span class="preference-label">Mattress</span>
+                        <span class="preference-value" id="mattressType">Firm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h3 class="section-title">Weather & Recommendations</h3>
+            <div class="weather-container">
+                <div class="current-weather">
+                    <div class="weather-icon" id="weatherIcon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="weather-info">
+                        <span class="weather-temp" id="weatherTemp">24°C</span>
+                        <span class="weather-desc" id="weatherDesc">Sunny</span>
+                        <span class="weather-location" id="weatherLocation">Budapest</span>
+                    </div>
+                </div>
+                <div class="weather-forecast" id="weatherForecast">
+                    <div class="forecast-item">
+                        <span class="forecast-time">12:00</span>
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="forecast-temp">26°C</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-time">15:00</span>
+                        <i class="fas fa-sun"></i>
+                        <span class="forecast-temp">28°C</span>
+                    </div>
+                    <div class="forecast-item">
+                        <span class="forecast-time">18:00</span>
+                        <i class="fas fa-cloud"></i>
+                        <span class="forecast-temp">25°C</span>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendations" id="recommendations">
+                <div class="recommendation">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Perfect weather for exploring the city</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h3 class="section-title">Available Services</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Concierge</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Room Service</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-spa"></i>
+                    <span>Spa & Wellness</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Fitness Center</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">Enjoy your stay at NEOX Hotel Experience</p>
+                <p class="contact-info">For assistance, press the service button on your remote</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
