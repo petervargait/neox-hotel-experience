@@ -1,0 +1,526 @@
+/* NEOX Hotel Experience - Modern TV Interface */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling on TV */
+}
+
+body {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0F1B2D 0%, #1B2951 30%, #2C3E50 100%);
+    background-image: url('/images/NEOXBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Modern NEOX Design System */
+:root {
+    --neox-gold: #D4AF37;
+    --neox-gold-light: #F4E4A6;
+    --neox-gold-dark: #B8860B;
+    --neox-navy: #1B2951;
+    --neox-navy-dark: #0F1B2D;
+    --neox-navy-light: #34495E;
+    --neox-white: #FFFFFF;
+    --neox-light: #F8F9FA;
+    --neox-glass: rgba(27, 41, 81, 0.15);
+    --neox-glass-border: rgba(212, 175, 55, 0.2);
+    --neox-shadow: rgba(15, 27, 45, 0.4);
+    --neox-glow: rgba(212, 175, 55, 0.4);
+    --neox-gradient: linear-gradient(135deg, rgba(27, 41, 81, 0.9) 0%, rgba(15, 27, 45, 0.95) 100%);
+    --panel-radius: 24px;
+    --panel-padding: 2rem;
+}
+
+/* TV Container - 16:9 Optimized */
+.tv-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    height: 80px;
+    background: var(--neox-gradient);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--neox-glass-border);
+    border-radius: var(--panel-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 8px 32px var(--neox-shadow);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.neox-logo {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 0 8px var(--neox-glow));
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.neox-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--neox-gold);
+    text-shadow: 0 0 15px var(--neox-glow);
+    letter-spacing: 0.1em;
+}
+
+.hotel-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--neox-light);
+    letter-spacing: 0.2em;
+    margin-top: -2px;
+}
+
+.datetime-container {
+    text-align: right;
+}
+
+.time {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--neox-gold);
+    text-shadow: 0 0 10px var(--neox-glow);
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: var(--neox-light-gray);
+    opacity: 0.9;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    /* Stronger blue background for welcome section */
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 100%);
+    padding: 3rem;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border: 3px solid var(--neox-gold);
+    box-shadow: 0 15px 50px var(--neox-shadow), 0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+.welcome-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--neox-gold);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px var(--neox-glow);
+}
+
+.guest-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--neox-gold);
+    margin-bottom: 1.5rem;
+    opacity: 0.98;
+}
+
+.welcome-message {
+    font-size: 1.5rem;
+    color: var(--neox-light-gray);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.room-info {
+    display: inline-block;
+    background: var(--neox-gold);
+    color: var(--neox-navy);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    box-shadow: 0 5px 20px var(--neox-glow);
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--neox-gold);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 15px var(--neox-glow);
+}
+
+/* Room Parameters Section */
+.room-parameters {
+    margin-bottom: 3rem;
+}
+
+.parameters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.parameter-card {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.parameter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--neox-shadow);
+    border-color: var(--neox-gold);
+}
+
+.parameter-icon {
+    font-size: 2.5rem;
+    color: var(--neox-gold);
+    margin-right: 2rem;
+    text-shadow: 0 0 10px var(--neox-glow);
+}
+
+.parameter-content {
+    flex: 1;
+}
+
+.parameter-label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--neox-light-gray);
+    margin-bottom: 0.5rem;
+}
+
+.parameter-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--neox-white);
+    margin-bottom: 1rem;
+}
+
+.parameter-indicator {
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.parameter-indicator.excellent {
+    background: linear-gradient(90deg, #27AE60, #2ECC71);
+}
+
+.parameter-indicator.optimal {
+    background: linear-gradient(90deg, var(--neox-gold), var(--neox-bronze));
+}
+
+.parameter-indicator.good {
+    background: linear-gradient(90deg, #F39C12, #E67E22);
+}
+
+/* Preferences Section */
+.preferences-section {
+    margin-bottom: 3rem;
+}
+
+.preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.preference-card {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.preference-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--neox-shadow);
+}
+
+.preference-icon {
+    font-size: 2rem;
+    color: var(--neox-gold);
+    margin-right: 1.5rem;
+}
+
+.preference-label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--neox-light-gray);
+    margin-bottom: 0.5rem;
+}
+
+.preference-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--neox-white);
+}
+
+/* Weather Section */
+.weather-section {
+    margin-bottom: 3rem;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.current-weather {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+}
+
+.weather-icon {
+    font-size: 3rem;
+    color: var(--neox-gold);
+    margin-right: 2rem;
+    text-shadow: 0 0 15px var(--neox-glow);
+}
+
+.weather-temp {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--neox-white);
+    margin-bottom: 0.5rem;
+}
+
+.weather-desc {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--neox-gold);
+    margin-bottom: 0.5rem;
+}
+
+.weather-location {
+    display: block;
+    font-size: 1rem;
+    color: var(--neox-light-gray);
+    opacity: 0.8;
+}
+
+.weather-forecast {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+}
+
+.forecast-item {
+    text-align: center;
+}
+
+.forecast-time {
+    display: block;
+    font-size: 1rem;
+    color: var(--neox-light-gray);
+    margin-bottom: 1rem;
+}
+
+.forecast-item i {
+    font-size: 1.8rem;
+    color: var(--neox-gold);
+    margin-bottom: 1rem;
+}
+
+.forecast-temp {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--neox-white);
+}
+
+.recommendations {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+}
+
+.recommendation {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--neox-white);
+}
+
+.recommendation i {
+    font-size: 1.5rem;
+    color: var(--neox-gold);
+    margin-right: 1rem;
+}
+
+/* Services Section */
+.services-section {
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item {
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 80%);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--neox-gold);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--neox-shadow);
+    border-color: var(--neox-gold);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: var(--neox-gold);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--neox-glow);
+}
+
+.service-item span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--neox-white);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: linear-gradient(135deg, var(--neox-navy) 0%, var(--neox-navy-dark) 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--neox-gold);
+    box-shadow: 0 10px 30px var(--neox-shadow);
+}
+
+.footer-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--neox-gold);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    color: var(--neox-light-gray);
+    opacity: 0.8;
+}
+
+/* Responsive Design for TV Screens */
+@media screen and (min-width: 1920px) {
+    .main-container {
+        padding: 3rem;
+    }
+    
+    .welcome-title {
+        font-size: 5rem;
+    }
+    
+    .guest-name {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .parameters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .weather-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-title {
+        font-size: 3rem;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-container > * {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
