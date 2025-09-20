@@ -15,7 +15,8 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="logo-section">
-                <img src="/images/neox-logo.svg" alt="NEOX Hotel" class="neox-logo">
+                <img src="/images/Transparent%20Logo.png" alt="NEOX Hotel" class="neox-logo" onerror="this.src='/images/neox-logo.svg'">
+                <img src="/images/NEOXBackground.png" alt="" class="bg-preload" style="display:none;">
                 <div class="logo-text">
                     <span class="neox-brand">NEOX</span>
                     <span class="hotel-text">HOTEL EXPERIENCE</span>
@@ -86,27 +87,28 @@
                 </div>
                 <div class="env-stats">
                     <div class="env-stat">
-                        <i class="fas fa-wind"></i>
+                        <div class="air-quality-icons">
+                            <i class="fas fa-leaf excellent-air"></i>
+                            <i class="fas fa-wind excellent-air"></i>
+                            <i class="fas fa-check-circle excellent-air"></i>
+                        </div>
                         <div class="stat-info">
                             <span class="stat-label">Air Quality</span>
-                            <span class="stat-value" id="airQuality">Excellent</span>
-                            <div class="stat-bar excellent"></div>
+                            <span class="stat-value" id="airQuality">Fresh & Pure</span>
                         </div>
                     </div>
                     <div class="env-stat">
-                        <i class="fas fa-thermometer-half"></i>
+                        <i class="fas fa-thermometer-half temp-icon"></i>
                         <div class="stat-info">
                             <span class="stat-label">Temperature</span>
                             <span class="stat-value" id="temperature">22°C</span>
-                            <div class="stat-bar optimal"></div>
                         </div>
                     </div>
                     <div class="env-stat">
-                        <i class="fas fa-tint"></i>
+                        <i class="fas fa-tint humidity-icon"></i>
                         <div class="stat-info">
                             <span class="stat-label">Humidity</span>
                             <span class="stat-value" id="humidity">45%</span>
-                            <div class="stat-bar optimal"></div>
                         </div>
                     </div>
                 </div>
@@ -143,9 +145,23 @@
                     <h3>Recommendations</h3>
                 </div>
                 <div class="recommendations-content" id="recommendations">
-                    <div class="recommendation">
-                        <i class="fas fa-umbrella-beach"></i>
-                        <span>Perfect weather for exploring the city</span>
+                    <div class="recommendation-item">
+                        <div class="recommendation-photo">
+                            <img src="/images/budapest-parliament.jpg" alt="Budapest Parliament" onerror="this.style.background='linear-gradient(135deg, #D4AF37, #B8860B)'; this.innerHTML='<i class=\"fas fa-landmark\"></i>';">
+                        </div>
+                        <div class="recommendation-text">
+                            <h4>Visit Parliament</h4>
+                            <p>Perfect weather for sightseeing</p>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-photo">
+                            <img src="/images/budapest-baths.jpg" alt="Thermal Baths" onerror="this.style.background='linear-gradient(135deg, #2ECC71, #27AE60)'; this.innerHTML='<i class=\"fas fa-hot-tub\"></i>';">
+                        </div>
+                        <div class="recommendation-text">
+                            <h4>Thermal Baths</h4>
+                            <p>Relax in historic spas</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,20 +174,46 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>Concierge</span>
+                        <i class="fas fa-concierge-bell"></i>
+                        <div class="service-details">
+                            <span class="service-name">Concierge</span>
+                            <span class="service-desc">24/7 Personal Service</span>
+                        </div>
                     </div>
                     <div class="service-item">
                         <i class="fas fa-utensils"></i>
-                        <span>Room Service</span>
+                        <div class="service-details">
+                            <span class="service-name">Room Service</span>
+                            <span class="service-desc">Fine Dining Delivered</span>
+                        </div>
                     </div>
                     <div class="service-item">
                         <i class="fas fa-spa"></i>
-                        <span>Spa & Wellness</span>
+                        <div class="service-details">
+                            <span class="service-name">Spa & Wellness</span>
+                            <span class="service-desc">Luxury Treatments</span>
+                        </div>
                     </div>
                     <div class="service-item">
                         <i class="fas fa-dumbbell"></i>
-                        <span>Fitness Center</span>
+                        <div class="service-details">
+                            <span class="service-name">Fitness Center</span>
+                            <span class="service-desc">Premium Equipment</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-car"></i>
+                        <div class="service-details">
+                            <span class="service-name">Valet Parking</span>
+                            <span class="service-desc">Complimentary Service</span>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-wifi"></i>
+                        <div class="service-details">
+                            <span class="service-name">High-Speed WiFi</span>
+                            <span class="service-desc">Ultra-Fast Connection</span>
+                        </div>
                     </div>
                 </div>
             </div>
