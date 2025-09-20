@@ -13,20 +13,18 @@ html, body {
 }
 
 body {
-    font-family: 'Montserrat', 'Inter', sans-serif;
-    /* Strong dark navy background - never white */
+    font-family: 'Inter', sans-serif;
     background: #0F1B2D;
     background-image: 
-        linear-gradient(135deg, rgba(15, 27, 45, 0.8) 0%, rgba(27, 41, 81, 0.6) 50%, rgba(44, 62, 80, 0.8) 100%),
-        url('/images/NEOXBackground.png'), 
-        url('/images/NEOXbackground.png');
-    background-size: cover, cover, cover;
-    background-position: center, center, center;
-    background-attachment: fixed, fixed, fixed;
+        linear-gradient(135deg, rgba(15, 27, 45, 0.9) 0%, rgba(27, 41, 81, 0.8) 50%, rgba(44, 62, 80, 0.9) 100%),
+        url('/images/NEOXBackground.png');
+    background-size: cover, cover;
+    background-position: center, center;
+    background-attachment: fixed;
     color: #FFFFFF;
-    font-weight: 400;
-    line-height: 1.4;
-    font-size: 1rem; /* Base font size for TV */
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: 1.1rem;
 }
 
 /* Modern NEOX Design System */
@@ -89,17 +87,17 @@ body {
     opacity: 1 !important;
 }
 
-/* Logo fallback styling */
+/* NEOX Logo - ALWAYS VISIBLE */
 .logo-fallback-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--neox-gold);
-    text-shadow: 0 0 20px var(--neox-glow);
-    letter-spacing: 0.1em;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 200;
+    color: #FFFFFF;
+    letter-spacing: 0.5em;
     height: 70px;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 
 /* Ensure logo always shows even if image fails */
@@ -121,21 +119,22 @@ body {
 }
 
 .neox-brand {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--neox-gold);
-    text-shadow: 0 0 20px var(--neox-glow);
-    letter-spacing: 0.1em;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 200;
+    color: #FFFFFF;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
 }
 
 .hotel-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    font-weight: 400;
-    color: var(--neox-light);
+    font-weight: 300;
+    color: var(--neox-gold);
     letter-spacing: 0.2em;
     margin-top: -2px;
+    text-transform: none;
 }
 
 /* DateTime Section */
@@ -176,11 +175,12 @@ body {
 .weather-panel,
 .environment-panel,
 .preferences-panel,
-.recommendations-panel,
+.recommendations-panel {
 .services-panel {
     background: linear-gradient(135deg, 
         rgba(27, 41, 81, 0.95) 0%, 
         rgba(15, 27, 45, 0.98) 100%);
+    color: var(--neox-white);
     backdrop-filter: blur(20px);
     border: 2px solid rgba(212, 175, 55, 0.3);
     border-radius: var(--panel-radius);
@@ -287,6 +287,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    color: var(--neox-white);
 }
 
 .temp-large {
@@ -506,7 +507,7 @@ body {
 
 .budapest-activity span {
     font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--neox-white);
     line-height: 1.3;
