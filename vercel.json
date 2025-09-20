@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "neoxhotelexperience",
   "builds": [
     {
       "src": "index.js",
@@ -19,11 +18,6 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "index.js": {
-      "maxDuration": 10
-    }
   },
   "headers": [
     {
