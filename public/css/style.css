@@ -78,14 +78,14 @@ background-image:
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .neox-logo {
-    height: 50px;
+    height: 70px;
     width: auto;
-    filter: drop-shadow(0 0 10px var(--neox-glow));
-    max-width: 150px;
+    filter: drop-shadow(0 0 15px var(--neox-glow));
+    max-width: 200px;
     display: block !important;
     opacity: 1 !important;
 }
@@ -136,23 +136,31 @@ background-image:
     line-height: 1;
 }
 
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
 .neox-brand {
     font-family: 'Inter', sans-serif;
     font-size: 2.8rem;
     font-weight: 200;
     color: #FFFFFF;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .hotel-text {
     font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--neox-gold);
-    letter-spacing: 0.2em;
-    margin-top: -2px;
+    letter-spacing: 0.15em;
+    margin-top: 2px;
     text-transform: none;
+    text-shadow: 0 0 10px var(--neox-glow);
 }
 
 /* DateTime Section */
