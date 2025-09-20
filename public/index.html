@@ -15,8 +15,7 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="logo-section">
-                <img src="/images/Transparent Logo.png" alt="NEOX Hotel" class="neox-logo" onerror="this.onerror=null; this.src='/images/Transparent Logo.svg';">
-                <div class="logo-fallback-text" style="display: none;">NEOX</div>
+                <div class="neox-text-logo">NEOX</div>
             </div>
             <div class="datetime-section">
                 <div class="current-time" id="currentTime">00:00</div>
@@ -78,33 +77,32 @@
             <!-- Room Environment Panel -->
             <div class="environment-panel">
                 <div class="panel-header">
-                    <i class="fas fa-home panel-header-icon"></i>
+                    <i class="fas fa-thermometer-half panel-header-icon"></i>
                     <h3>Room Environment</h3>
                 </div>
-                <div class="env-stats">
-                    <div class="env-stat">
+                <div class="env-grid">
+                    <div class="env-item">
+                        <i class="fas fa-thermometer-half temp-icon"></i>
+                        <div class="env-details">
+                            <div class="env-value">24°C</div>
+                            <div class="env-label">Temperature</div>
+                        </div>
+                    </div>
+                    <div class="env-item">
+                        <i class="fas fa-tint humidity-icon"></i>
+                        <div class="env-details">
+                            <div class="env-value">45%</div>
+                            <div class="env-label">Humidity</div>
+                        </div>
+                    </div>
+                    <div class="env-item air-quality">
                         <div class="air-quality-icons">
                             <i class="fas fa-leaf excellent-air"></i>
                             <i class="fas fa-wind excellent-air"></i>
-                            <i class="fas fa-check-circle excellent-air"></i>
                         </div>
-                        <div class="stat-info">
-                            <span class="stat-label">Air Quality</span>
-                            <span class="stat-value" id="airQuality">Fresh & Pure</span>
-                        </div>
-                    </div>
-                    <div class="env-stat">
-                        <i class="fas fa-thermometer-half temp-icon"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Temperature</span>
-                            <span class="stat-value" id="temperature">22°C</span>
-                        </div>
-                    </div>
-                    <div class="env-stat">
-                        <i class="fas fa-tint humidity-icon"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Humidity</span>
-                            <span class="stat-value" id="humidity">45%</span>
+                        <div class="env-details">
+                            <div class="env-value">Excellent</div>
+                            <div class="env-label">Air Quality</div>
                         </div>
                     </div>
                 </div>
@@ -155,14 +153,14 @@
                     <h4>In Budapest Today</h4>
                     <div class="budapest-items">
                         <div class="budapest-item">
-                            <img src="https://images.unsplash.com/photo-1544894079-83dd4f0e77a7?q=80&w=600&auto=format&fit=crop" alt="Hungarian Parliament" class="budapest-image">
+                            <img src="/images/budapest-parliament.jpg" alt="Hungarian Parliament" class="budapest-image">
                             <div class="budapest-info">
                                 <div class="budapest-title">Hungarian Parliament</div>
                                 <div class="budapest-desc">Guided tour available</div>
                             </div>
                         </div>
                         <div class="budapest-item">
-                            <img src="https://images.unsplash.com/photo-1576088534836-3e3f5e9a29b0?q=80&w=600&auto=format&fit=crop" alt="Széchenyi Thermal Bath" class="budapest-image">
+                            <img src="/images/budapest-thermal-baths.jpg" alt="Széchenyi Thermal Bath" class="budapest-image">
                             <div class="budapest-info">
                                 <div class="budapest-title">Széchenyi Thermal Bath</div>
                                 <div class="budapest-desc">Evening tickets available</div>

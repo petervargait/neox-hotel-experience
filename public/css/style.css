@@ -54,10 +54,11 @@ background-image:
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Top Bar */
@@ -81,25 +82,40 @@ background-image:
 }
 
 .neox-logo {
-    height: 70px;
+    height: 50px;
     width: auto;
-    filter: drop-shadow(0 0 15px var(--neox-glow)) brightness(1.1);
-    max-width: 180px;
+    filter: drop-shadow(0 0 10px var(--neox-glow));
+    max-width: 150px;
     display: block !important;
     opacity: 1 !important;
 }
 
 /* NEOX Logo - ALWAYS VISIBLE */
-.logo-fallback-text {
+.neox-text-logo {
     font-family: 'Inter', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 200;
-    color: #FFFFFF;
-    letter-spacing: 0.5em;
-    height: 70px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--neox-gold);
+    letter-spacing: 0.4em;
+    height: 50px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    text-shadow: 0 0 15px var(--neox-glow);
+    filter: drop-shadow(0 0 10px var(--neox-glow));
+}
+
+.logo-fallback-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--neox-gold);
+    letter-spacing: 0.3em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--neox-glow);
 }
 
 /* Ensure logo always shows even if image fails */
@@ -166,10 +182,11 @@ background-image:
 .content-grid {
     flex: 1;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1.2fr 1.3fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
     min-height: 0;
+    height: 100%;
 }
 
 /* Panel Base Styles - Enhanced with better contrast */
@@ -192,13 +209,18 @@ background-image:
     overflow: hidden;
 }
 
-/* Welcome Panel */
+/* Welcome Panel - Smaller */
 .welcome-panel {
-    grid-row: span 2;
+    grid-row: span 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+/* Recommendations Panel - Bigger */
+.recommendations-panel {
+    grid-row: span 2;
 }
 
 .welcome-title {
@@ -574,8 +596,50 @@ background-image:
     line-height: 1.3;
 }
 
+/* Environment Grid */
+.env-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.env-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--neox-glass-border);
+    border-radius: 12px;
+}
+
+.env-item.air-quality .air-quality-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.env-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.env-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--neox-white);
+    margin-bottom: 0.2rem;
+}
+
+.env-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--neox-light);
+    opacity: 0.8;
+}
+
 /* Budapest Recommendations */
-.budapest-recommendations { margin-top: 1.5rem; }
+.budapest-recommendations { margin-top: 1rem; }
 .budapest-recommendations h4 {
     font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
@@ -585,9 +649,9 @@ background-image:
 }
 .budapest-items { display: flex; flex-direction: column; gap: 0.75rem; }
 .budapest-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(255,255,255,0.05); border: 1px solid var(--neox-glass-border); border-radius: 12px; }
-.budapest-image { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; }
-.budapest-title { font-weight: 600; color: var(--neox-white); }
-.budapest-desc { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+.budapest-image { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; }
+.budapest-title { font-weight: 600; color: var(--neox-white); font-size: 0.95rem; }
+.budapest-desc { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
 
 /* Bottom Bar */
 .bottom-bar {
