@@ -200,30 +200,30 @@ body {
 }
 
 .welcome-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.8rem;
-    font-weight: 600;
-    color: var(--neox-gold);
-    text-shadow: 0 0 40px var(--neox-glow);
-    margin-bottom: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: var(--neox-white);
+    margin-bottom: 2rem;
     line-height: 1.1;
 }
 
 .guest-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
     color: var(--neox-white);
-    margin-bottom: 1.5rem;
-    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.3;
 }
 
 .welcome-message {
     font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--neox-light);
     margin-bottom: 2rem;
-    opacity: 0.8;
+    opacity: 0.7;
     line-height: 1.5;
 }
 
@@ -251,9 +251,9 @@ body {
 }
 
 .panel-header h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
     color: var(--neox-gold);
     margin: 0;
 }
@@ -290,18 +290,19 @@ body {
 }
 
 .temp-large {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
     color: var(--neox-white);
     line-height: 1;
 }
 
 .weather-desc {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--neox-gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--neox-white);
+    opacity: 0.8;
 }
 
 .weather-location {
@@ -418,17 +419,17 @@ body {
 }
 
 .stat-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
     font-weight: 500;
-    color: var(--neox-light);
-    opacity: 0.8;
+    color: var(--neox-gold);
+    opacity: 1;
 }
 
 .stat-value {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
     color: var(--neox-white);
 }
 
@@ -460,89 +461,55 @@ body {
 }
 
 .pref-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
     font-weight: 500;
-    color: var(--neox-light);
-    opacity: 0.8;
+    color: var(--neox-gold);
+    opacity: 1;
 }
 
 .pref-value {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
     color: var(--neox-white);
 }
 
-/* Recommendations Panel - Budapest Photos */
-.recommendations-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+/* Budapest Recommendations - Match AI Design */
+.budapest-recommendation {
+    padding: 1.5rem 0;
 }
 
-.recommendation-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    border: 2px solid var(--neox-glass-border);
-    transition: all 0.3s ease;
-}
-
-.recommendation-item:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: var(--neox-gold);
-    transform: translateX(5px);
-}
-
-.recommendation-photo {
-    width: 80px;
-    height: 60px;
-    border-radius: 12px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--neox-gradient);
-    border: 2px solid var(--neox-gold);
-}
-
-.recommendation-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.recommendation-photo i {
-    font-size: 2rem;
-    color: var(--neox-gold);
-    text-shadow: 0 0 15px var(--neox-glow);
-}
-
-.recommendation-text {
-    flex: 1;
-}
-
-.recommendation-text h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--neox-gold);
-    margin: 0 0 0.3rem 0;
-}
-
-.recommendation-text p {
+.budapest-recommendation h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: var(--neox-light);
-    margin: 0;
-    opacity: 0.9;
-    line-height: 1.4;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--neox-gold);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+.budapest-activity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.budapest-activity i {
+    font-size: 1.5rem;
+    color: var(--neox-gold);
+    text-shadow: 0 0 10px var(--neox-glow);
+    width: 30px;
+    text-align: center;
+}
+
+.budapest-activity span {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--neox-white);
+    line-height: 1.3;
 }
 
 /* Services Panel - Enhanced with Details */
@@ -588,16 +555,16 @@ body {
 }
 
 .service-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
     color: var(--neox-white);
     line-height: 1.2;
 }
 
 .service-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--neox-light);
     opacity: 0.8;
