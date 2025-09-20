@@ -14,15 +14,19 @@ html, body {
 
 body {
     font-family: 'Montserrat', 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0F1B2D 0%, #1B2951 30%, #2C3E50 100%);
-    background-image: url('/images/NEOXBackground.png'), url('/images/NEOXbackground.png');
-    background-size: cover, cover;
-    background-position: center, center;
-    background-attachment: fixed, fixed;
+    /* Strong dark navy background - never white */
+    background: #0F1B2D;
+    background-image: 
+        linear-gradient(135deg, rgba(15, 27, 45, 0.8) 0%, rgba(27, 41, 81, 0.6) 50%, rgba(44, 62, 80, 0.8) 100%),
+        url('/images/NEOXBackground.png'), 
+        url('/images/NEOXbackground.png');
+    background-size: cover, cover, cover;
+    background-position: center, center, center;
+    background-attachment: fixed, fixed, fixed;
     color: #FFFFFF;
     font-weight: 400;
-    line-height: 1.3;
-    font-size: 1.2rem; /* Base font size increased for TV */
+    line-height: 1.4;
+    font-size: 1rem; /* Base font size for TV */
 }
 
 /* Modern NEOX Design System */
@@ -77,10 +81,31 @@ body {
 }
 
 .neox-logo {
-    height: 80px;
+    height: 70px;
     width: auto;
-    filter: drop-shadow(0 0 12px var(--neox-glow));
-    max-width: 200px;
+    filter: drop-shadow(0 0 15px var(--neox-glow)) brightness(1.1);
+    max-width: 180px;
+    display: block !important;
+    opacity: 1 !important;
+}
+
+/* Logo fallback styling */
+.logo-fallback-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--neox-gold);
+    text-shadow: 0 0 20px var(--neox-glow);
+    letter-spacing: 0.1em;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure logo always shows even if image fails */
+.logo-section {
+    min-height: 70px;
+    align-items: center;
 }
 
 .bg-preload {
@@ -97,7 +122,7 @@ body {
 
 .neox-brand {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--neox-gold);
     text-shadow: 0 0 20px var(--neox-glow);
@@ -106,11 +131,11 @@ body {
 
 .hotel-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: var(--neox-light);
     letter-spacing: 0.2em;
-    margin-top: -4px;
+    margin-top: -2px;
 }
 
 /* DateTime Section */
@@ -120,7 +145,7 @@ body {
 
 .current-time {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--neox-gold);
     text-shadow: 0 0 20px var(--neox-glow);
@@ -129,7 +154,7 @@ body {
 
 .current-date {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--neox-light);
     opacity: 0.9;
@@ -146,19 +171,21 @@ body {
     min-height: 0;
 }
 
-/* Panel Base Styles */
+/* Panel Base Styles - Enhanced with better contrast */
 .welcome-panel,
 .weather-panel,
 .environment-panel,
 .preferences-panel,
 .recommendations-panel,
 .services-panel {
-    background: var(--neox-gradient);
+    background: linear-gradient(135deg, 
+        rgba(27, 41, 81, 0.95) 0%, 
+        rgba(15, 27, 45, 0.98) 100%);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--neox-glass-border);
+    border: 2px solid rgba(212, 175, 55, 0.3);
     border-radius: var(--panel-radius);
     padding: var(--panel-padding);
-    box-shadow: 0 8px 32px var(--neox-shadow);
+    box-shadow: 0 12px 40px rgba(15, 27, 45, 0.6);
     position: relative;
     overflow: hidden;
 }
@@ -174,28 +201,28 @@ body {
 
 .welcome-title {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
+    font-size: 3.8rem;
     font-weight: 600;
     color: var(--neox-gold);
     text-shadow: 0 0 40px var(--neox-glow);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     line-height: 1.1;
 }
 
 .guest-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 500;
     color: var(--neox-white);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.95;
 }
 
 .welcome-message {
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: var(--neox-light);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     opacity: 0.8;
     line-height: 1.5;
 }
@@ -204,11 +231,11 @@ body {
     display: inline-block;
     background: linear-gradient(135deg, var(--neox-gold), var(--neox-gold-dark));
     color: var(--neox-navy-dark);
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     box-shadow: 0 12px 36px var(--neox-glow);
     text-shadow: none;
 }
@@ -225,14 +252,14 @@ body {
 
 .panel-header h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--neox-gold);
     margin: 0;
 }
 
 .panel-header-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--neox-gold);
     text-shadow: 0 0 15px var(--neox-glow);
 }
@@ -264,7 +291,7 @@ body {
 
 .temp-large {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--neox-white);
     line-height: 1;
@@ -272,14 +299,14 @@ body {
 
 .weather-desc {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--neox-gold);
 }
 
 .weather-location {
     font-family: 'Inter', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--neox-light);
     opacity: 0.8;
 }
@@ -392,7 +419,7 @@ body {
 
 .stat-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--neox-light);
     opacity: 0.8;
@@ -400,7 +427,7 @@ body {
 
 .stat-value {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--neox-white);
 }
@@ -419,9 +446,9 @@ body {
 }
 
 .pref-item i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--neox-gold);
-    width: 50px;
+    width: 40px;
     text-align: center;
     text-shadow: 0 0 15px var(--neox-glow);
 }
@@ -434,7 +461,7 @@ body {
 
 .pref-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--neox-light);
     opacity: 0.8;
@@ -442,7 +469,7 @@ body {
 
 .pref-value {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--neox-white);
 }
@@ -503,15 +530,15 @@ body {
 
 .recommendation-text h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--neox-gold);
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.3rem 0;
 }
 
 .recommendation-text p {
     font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     color: var(--neox-light);
     margin: 0;
     opacity: 0.9;
@@ -545,10 +572,10 @@ body {
 }
 
 .service-item i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--neox-gold);
     text-shadow: 0 0 15px var(--neox-glow);
-    width: 50px;
+    width: 40px;
     text-align: center;
     flex-shrink: 0;
 }
@@ -562,7 +589,7 @@ body {
 
 .service-name {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--neox-white);
     line-height: 1.2;
@@ -570,7 +597,7 @@ body {
 
 .service-desc {
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 400;
     color: var(--neox-light);
     opacity: 0.8;
