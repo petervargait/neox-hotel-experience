@@ -15,7 +15,8 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="logo-section">
-                <div class="neox-text-logo">NEOX</div>
+                <img src="/images/neox-logo.png" alt="NEOX Hotel" class="neox-logo" onload="console.log('Logo loaded successfully')" onerror="console.log('Logo failed to load, trying fallback'); this.src='/images/Transparent Logo.png'; this.onerror=function(){console.log('Both logos failed'); this.style.display='none'; this.nextElementSibling.style.display='flex';};">
+                <div class="neox-text-logo" style="display: none;">NEOX</div>
             </div>
             <div class="datetime-section">
                 <div class="current-time" id="currentTime">00:00</div>
