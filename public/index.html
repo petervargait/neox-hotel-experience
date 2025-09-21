@@ -15,7 +15,8 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="logo-section">
-                <img src="/images/neox-logo.png" alt="NEOX Hotel" class="neox-logo" onload="console.log('Logo loaded successfully')" onerror="console.log('Logo failed to load, trying fallback'); this.src='/images/Transparent Logo.png'; this.onerror=function(){console.log('Both logos failed'); this.style.display='none'; this.nextElementSibling.style.display='flex';};">                <div class="brand-text">
+                <img src="/images/Transparent Logo.png" alt="NEOX Hotel" class="neox-logo" onload="console.log('Logo loaded successfully')" onerror="console.log('Logo failed to load, showing text version'); this.style.display='none'; this.nextElementSibling.nextElementSibling.style.display='flex';">                
+                <div class="brand-text">
                     <div class="neox-brand">NEOX</div>
                     <div class="hotel-text">Hotel Experience</div>
                 </div>
@@ -142,16 +143,6 @@
                     <i class="fas fa-lightbulb panel-header-icon"></i>
                     <h3>Recommendations</h3>
                 </div>
-                <div class="recommendations-content" id="recommendations">
-                    <div class="budapest-recommendation">
-                        <h4>In Budapest today</h4>
-                        <div class="budapest-activity">
-                            <i class="fas fa-hot-tub"></i>
-                            <span>Széchenyi Thermal Bath — Evening ticket • Relaxation</span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Budapest Recommendations with images -->
                 <div class="budapest-recommendations">
                     <h4>In Budapest Today</h4>
